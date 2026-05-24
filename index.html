@@ -3,30 +3,23 @@
 <head>
     <title>Project 1</title>
 </head>
-<body>
+<body id="all-everything">
 
-    <h1 id="main-title">MobMec</h1>
+    <h1 id="main-title" class="texty">MobMec</h1>
 
     <button id="menu-btn">Menu</button>
 
     <div id="navbar">
-        <p>Home</p>
-        <p>Services</p>
-        <p>Contact</p>
+        <p class="texty">Home</p>
+        <p class="texty">Services</p>
+        <p class="texty">Contact</p>
     </div>
 
     <button id="theme-btn">Change Theme</button>
 
     <script>
-
-        // STEP 1:
-        // Select the menu button
         const menuButton = document.getElementById("menu-btn");
-        // STEP 2:
-        // Select the navbar
         const navbarhai = document.getElementById("navbar");
-        // STEP 3:
-        // Add click event on menu button
         menuButton.addEventListener("click", function(){
             if (navbarhai.style.display == "none") {
                 navbarhai.style.display = "block";
@@ -34,30 +27,21 @@
                 navbarhai.style.display = "none";
             }
         });
-        // STEP 4:
-        // When clicked:
-        // hide/show navbar
-
-        // HINT:
-        // Use:
-        // addEventListener()
-        // style.display
-
-        // ----------------------------
-
-        // BONUS TASK:
-        // Create dark mode button
-
-        // STEP 1:
-        // Select theme button
-
-        // STEP 2:
-        // When clicked:
-        // change background color of body
-
-        // HINT:
-        // document.body.style.backgroundColor
-
+        const themer = document.getElementById("theme-btn");
+        const text_themer = document.getElementsByClassName("texty");
+        
+        themer.addEventListener("click", function(){
+            if (document.body.style.backgroundColor == "black"){
+                    document.body.style.backgroundColor = "white";
+                    // text_themer
+                    document.body.style.color = "black";
+            }
+            else{
+                document.body.style.backgroundColor = "black";
+                // textthemer."white" ;
+                document.body.style.color = "white";
+            }
+        });
     </script>
 
 </body>
