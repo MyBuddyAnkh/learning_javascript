@@ -21,13 +21,19 @@
 
         // STEP 1:
         // Select the menu button
-
+        const menuButton = document.getElementById("menu-btn");
         // STEP 2:
         // Select the navbar
-
+        const navbarhai = document.getElementById("navbar");
         // STEP 3:
         // Add click event on menu button
-
+        menuButton.addEventListener("click", function(){
+            if (navbarhai.style.display == "none") {
+                navbarhai.style.display = "block";
+            } else {
+                navbarhai.style.display = "none";
+            }
+        });
         // STEP 4:
         // When clicked:
         // hide/show navbar
